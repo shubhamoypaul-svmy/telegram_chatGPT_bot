@@ -1,5 +1,9 @@
 import os
 import openai
+import urllib.request, json 
+import requests
+from googletrans import Translator
+
 def chat_gpt(text_input):
     openai.api_key = "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"
 
@@ -19,18 +23,15 @@ def html_str(txt):
     txt = txt.replace('.jpg','')
     return(txt)
 
-from googletrans import Translator
 def Bengali_translator(sentence):
     translator = Translator()
     return(translator.translate(sentence).text)
 
-from googletrans import Translator
 def Bengali_output(sentence):
     translator = Translator()
     return(translator.translate(sentence, dest='bn').text)
 
-import urllib.request, json 
-import requests
+
 dfl=[0,0,0]
 link = "https://api.telegram.org/bot[Token]]/"
 while True:
